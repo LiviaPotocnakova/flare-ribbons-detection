@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 from metrics import dice_np, iou_np
+import math
+from math import sqrt
 
 
 def plot_imgs(imgs, masks, predictions=None, n_imgs=10):
