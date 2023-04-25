@@ -278,14 +278,14 @@ def cleanLines(lines):
             slope2 = getSlope(x3, y3, x4, y4)
 
             # if the slopes are too different, skip them
-            if abs(slope-slope2) >= 12 or (slope > 0 and slope2 < 0 or slope < 0 and slope2 > 0):
+            if abs(slope-slope2) >= 1 or (slope > 0 and slope2 < 0 or slope < 0 and slope2 > 0):
                 continue
 
             # get the smallest distance of two lines 
             point_distance = min(minDistance(x1,y1,x2,y2,x3,y3), minDistance(x1,y1,x2,y2,x4,y4), minDistance(x3,y3,x4,y4,x1,y1), minDistance(x3,y3,x4,y4,x2,y2))
             
             # if the lines are too far from each other, skip them
-            if point_distance > 10:
+            if point_distance > 5:
                 continue
             
             if angle > 45 and angle < 135:
